@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Green Acres Farm | Chickens & Rabbits for Sale</title>
+<meta name="description" content="Healthy, farm-raised chickens and rabbits for sale. Order easily on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2f5d3a;
+  --green-dark:#1f4128;
+  --cream:#fbf6ea;
+  --sand:#f1e7cf;
+  --brown:#6b4423;
+  --gold:#d9a441;
+  --ink:#2a2118;
+  --white:#fff;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(60,40,15,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+.container{width:min(1120px,92%);margin-inline:auto}
+section{padding:80px 0}
+.eyebrow{display:inline-block;color:var(--gold);font-weight:600;letter-spacing:.15em;text-transform:uppercase;font-size:.8rem;margin-bottom:10px}
+.section-title{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--green-dark);margin-bottom:12px}
+.section-sub{max-width:620px;color:#5b4d3e;margin-bottom:40px}
+.center{text-align:center}.center .section-sub{margin-inline:auto}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:999px;font-weight:600;border:2px solid transparent;cursor:pointer;font-size:.95rem;font-family:inherit;transition:.25s}
+.btn-primary{background:var(--gold);color:var(--ink)}
+.btn-primary:hover{background:#c89130;transform:translateY(-2px)}
+.btn-outline{border-color:var(--white);color:var(--white)}
+.btn-outline:hover{background:var(--white);color:var(--green-dark)}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1ebe5b;transform:translateY(-2px)}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(251,246,234,.95);backdrop-filter:blur(8px);border-bottom:1px solid #e8dcc0}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.35rem;color:var(--green-dark)}
+.logo span{color:var(--gold)}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{font-weight:500;font-size:.95rem;position:relative}
+nav a:after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--gold);transition:.25s}
+nav a:hover:after{width:100%}
+.menu-btn{display:none;background:none;border:0;font-size:1.7rem;cursor:pointer;color:var(--green-dark)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,rgba(31,65,40,.93),rgba(47,93,58,.85)),repeating-linear-gradient(45deg,#2f5d3a 0 20px,#2a5334 20px 40px);color:var(--white);padding:110px 0 90px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5.5vw,3.8rem);margin-bottom:18px}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p{font-size:1.08rem;max-width:520px;opacity:.93;margin-bottom:30px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-art{display:flex;justify-content:center;gap:10px;font-size:clamp(5rem,14vw,9rem);filter:drop-shadow(0 12px 18px rgba(0,0,0,.3))}
+.hero-art span:nth-child(2){margin-top:60px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:60px}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:18px;border-radius:var(--radius);text-align:center}
+.stat b{display:block;font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold)}
+.stat small{opacity:.9}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-card{background:var(--sand);border-radius:var(--radius);padding:40px;text-align:center;font-size:6rem;box-shadow:var(--shadow);border:2px dashed #d8c490}
+.about-card p{font-size:.9rem;color:#6b5a40;margin-top:10px}
+.checks{list-style:none;margin:20px 0 28px}
+.checks li{padding-left:30px;position:relative;margin-bottom:10px}
+.checks li:before{content:"✓";position:absolute;left:0;color:var(--white);background:var(--green);width:20px;height:20px;border-radius:50%;font-size:.7rem;display:grid;place-items:center;top:5px}
+
+/* Services */
+.services{background:var(--sand)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.card{background:var(--white);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);transition:.3s;border-bottom:4px solid transparent}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card .ico{font-size:2.6rem;margin-bottom:12px}
+.card h3{font-size:1.2rem;color:var(--green-dark);margin-bottom:8px}
+.card p{font-size:.93rem;color:#5b4d3e}
+
+/* Prices */
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:34px;flex-wrap:wrap}
+.tab{padding:10px 24px;border-radius:999px;border:2px solid var(--green);background:transparent;color:var(--green);font-weight:600;cursor:pointer;font-family:inherit;font-size:.95rem;transition:.2s}
+.tab.active{background:var(--green);color:var(--white)}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.price-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.price-top{background:var(--sand);padding:26px;text-align:center;font-size:3.4rem}
+.price-top:has(img){padding:0}
+.price-top img{width:100%;height:190px;object-fit:cover;display:block}
+.price-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.price-body h3{font-size:1.15rem;color:var(--green-dark)}
+.price-body p{font-size:.88rem;color:#6b5a40;margin:6px 0 14px;flex:1}
+.price{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--brown);margin-bottom:14px}
+.price small{font-family:'Poppins';font-size:.75rem;color:#8a7a60;font-weight:400}
+.note{text-align:center;margin-top:28px;font-size:.88rem;color:#7a6a50}
+
+/* Why */
+.why{background:var(--green-dark);color:var(--white)}
+.why .section-title{color:var(--white)}
+.why .section-sub{color:#d6e3d6}
+.why .card{background:rgba(255,255,255,.08);box-shadow:none;border:1px solid rgba(255,255,255,.15)}
+.why .card h3{color:var(--gold)}
+.why .card p{color:#e3ece3}
+
+/* Order */
+.order-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+form{background:var(--white);padding:32px;border-radius:var(--radius);box-shadow:var(--shadow)}
+label{display:block;font-weight:500;font-size:.9rem;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:12px 14px;border:1.5px solid #dccfae;border-radius:10px;font-family:inherit;font-size:.95rem;background:var(--cream)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green)}
+form .btn{width:100%;justify-content:center;margin-top:20px}
+
+/* Testimonials */
+.testi{background:var(--sand)}
+.quote{background:var(--white);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.quote p{font-style:italic;margin-bottom:14px}
+.quote b{color:var(--green-dark)}
+.stars{color:var(--gold);letter-spacing:2px}
+
+/* Contact */
+.contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:10px}
+.c-card{display:block;background:var(--white);border-radius:var(--radius);padding:28px;text-align:center;box-shadow:var(--shadow);transition:.25s}
+.c-card:hover{transform:translateY(-5px)}
+.c-card .ico{font-size:2.2rem}
+.c-card b{display:block;margin-top:8px;color:var(--green-dark)}
+.c-card span{font-size:.9rem;color:#6b5a40}
+
+/* Footer */
+footer{background:var(--ink);color:#cfc3ad;padding:40px 0 90px;text-align:center;font-size:.9rem}
+footer .logo{color:var(--white);display:block;margin-bottom:8px}
+.socials{display:flex;gap:16px;justify-content:center;margin:14px 0}
+.socials a{color:var(--gold);font-weight:500}
+
+/* Floating WhatsApp */
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:1.9rem;box-shadow:0 8px 20px rgba(0,0,0,.3);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .menu-btn{display:block}
+  nav ul{position:absolute;top:70px;left:0;right:0;background:var(--cream);flex-direction:column;padding:20px 6%;gap:16px;border-bottom:1px solid #e8dcc0;display:none}
+  nav ul.open{display:flex}
+  .hero-grid,.about-grid,.order-wrap{grid-template-columns:1fr}
+  .hero-art{order:-1;font-size:5rem}
+  .hero-art span:nth-child(2){margin-top:30px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">Green<span>Acres</span> Farm</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Farm fresh · Healthy · Trusted</span>
+        <h1>Quality <em>Chickens</em> & <em>Rabbits</em> Raised With Care</h1>
+        <p>From healthy broilers and layers to breeding rabbits, we raise every animal on clean feed in a clean environment. Order today and get it delivered fresh.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#prices">See Prices</a>
+          <a class="btn btn-outline" href="#order">Order Now</a>
+        </div>
+      </div>
+      <div class="hero-art"><span>🐓</span><span>🐇</span></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>500+</b><small>Happy customers</small></div>
+      <div class="stat"><b>1,000+</b><small>Birds & rabbits raised</small></div>
+      <div class="stat"><b>100%</b><small>Healthy & vaccinated</small></div>
+      <div class="stat"><b>Same day</b><small>Delivery available</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-card reveal" style="padding:0;overflow:hidden">
+  <img src="Rabbit 1.jpg" alt="Our farm" style="width:100%;height:100%;min-height:320px;object-fit:cover;display:block">
+</div>
+    <div class="reveal">
+      <span class="eyebrow">About us</span>
+      <h2 class="section-title">A family farm with a passion for healthy animals</h2>
+      <p>Green Acres Farm started small and grew through one thing: trust. We raise chickens and rabbits the right way, with quality feed, clean housing, regular vaccination and daily care, so you get healthy animals every time.</p>
+      <ul class="checks">
+        <li>Properly vaccinated and well fed</li>
+        <li>Clean, well-ventilated pens</li>
+        <li>Fair prices and honest dealings</li>
+        <li>Farm visits welcome by appointment</li>
+      </ul>
+      <a class="btn btn-primary" href="#contact">Talk to us</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container center">
+    <span class="eyebrow">What we do</span>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">Whether you want meat, eggs, or stock to start your own farm, we have you covered.</p>
+    <div class="cards" style="text-align:left">
+      <div class="card reveal"><div class="ico">🍗</div><h3>Broiler & Cockerel Sales</h3><p>Fast-growing, healthy birds ready for the table, sold live or dressed.</p></div>
+      <div class="card reveal"><div class="ico">🥚</div><h3>Layers & Fresh Eggs</h3><p>Point-of-lay birds and crates of fresh eggs collected daily.</p></div>
+      <div class="card reveal"><div class="ico">🐇</div><h3>Rabbit Sales</h3><p>Meat rabbits and breeding stock of healthy, strong breeds.</p></div>
+      <div class="card reveal"><div class="ico">🐣</div><h3>Day-Old & Growers</h3><p>Chicks and growers for people who want to start or expand a farm.</p></div>
+      <div class="card reveal"><div class="ico">🎓</div><h3>Farming Advice</h3><p>Guidance on housing, feeding and vaccination for new farmers.</p></div>
+      <div class="card reveal"><div class="ico">🚚</div><h3>Delivery</h3><p>We deliver within the city. Ask about delivery to other areas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section id="prices">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Price list</span>
+      <h2 class="section-title">Our Prices</h2>
+      <p class="section-sub">Prices may change with the market. Tap Order to confirm today's price on WhatsApp.</p>
+    </div>
+    <div class="tabs">
+      <button class="tab active" data-cat="chicken">🐓 Chickens</button>
+      <button class="tab" data-cat="rabbit">🐇 Rabbits</button>
+      <button class="tab" data-cat="eggs">🥚 Eggs & More</button>
+    </div>
+    <div class="price-grid" id="priceGrid"></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="container center">
+    <span class="eyebrow">Why choose us</span>
+    <h2 class="section-title">Why Customers Come Back</h2>
+    <p class="section-sub">We treat every customer like family and every animal with care.</p>
+    <div class="cards" style="text-align:left">
+      <div class="card"><h3>✔ Healthy Stock</h3><p>Vaccinated, active, and checked before every sale.</p></div>
+      <div class="card"><h3>✔ Fair Prices</h3><p>Good value with no hidden charges.</p></div>
+      <div class="card"><h3>✔ Easy Ordering</h3><p>Order in a minute on WhatsApp, no stress.</p></div>
+      <div class="card"><h3>✔ Reliable Delivery</h3><p>On time, every time, within our delivery areas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section id="order">
+  <div class="container order-wrap">
+    <div class="reveal">
+      <span class="eyebrow">Place an order</span>
+      <h2 class="section-title">Order in under a minute</h2>
+      <p style="margin-bottom:16px">Fill in the form and it opens WhatsApp with your order already typed out. Just press send. We'll reply to confirm price, availability and delivery.</p>
+      <ul class="checks">
+        <li>No account or payment needed to enquire</li>
+        <li>Quick replies during working hours</li>
+        <li>Pay on delivery or pickup (as agreed)</li>
+      </ul>
+    </div>
+    <form id="orderForm" class="reveal">
+      <label for="name">Your name</label>
+      <input id="name" required placeholder="e.g. Chinedu">
+      <label for="item">What do you want?</label>
+      <select id="item" required></select>
+      <label for="qty">Quantity</label>
+      <input id="qty" type="number" min="1" value="1" required>
+      <label for="loc">Delivery location</label>
+      <input id="loc" placeholder="Your area / town">
+      <label for="msg">Extra note (optional)</label>
+      <textarea id="msg" rows="3" placeholder="Anything we should know?"></textarea>
+      <button class="btn btn-wa" type="submit">💬 Send Order on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="container center">
+    <span class="eyebrow">Testimonials</span>
+    <h2 class="section-title">What Customers Say</h2>
+    <p class="section-sub">Replace these samples with real reviews from your customers.</p>
+    <div class="cards" style="text-align:left">
+      <div class="quote"><div class="stars">★★★★★</div><p>"The chickens were healthy and delivered on time. Will order again."</p><b>Ada O.</b></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"I started my rabbit farm with their breeding pair. Great advice too."</p><b>Emeka N.</b></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Fresh eggs every week and fair prices. Highly recommended."</p><b>Mrs. Bello</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container center">
+    <span class="eyebrow">Get in touch</span>
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-sub">Reach us on your favourite platform. WhatsApp is the fastest.</p>
+    <div class="contact-cards">
+      <a class="c-card" id="waLink" target="_blank" rel="noopener"><div class="ico">💬</div><b>WhatsApp</b><span>Chat with us now</span></a>
+      <a class="c-card" id="fbLink" target="_blank" rel="noopener"><div class="ico">📘</div><b>Facebook</b><span>Follow our page</span></a>
+      <a class="c-card" id="igLink" target="_blank" rel="noopener"><div class="ico">📸</div><b>Instagram</b><span>See our latest photos</span></a>
+      <a class="c-card" id="telLink"><div class="ico">📞</div><b>Call us</b><span id="telText"></span></a>
+    </div>
+    <p style="margin-top:30px;color:#6b5a40">📍 Your farm address here · 🕘 Mon–Sat, 8am – 6pm</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <a href="#home" class="logo">Green<span>Acres</span> Farm</a>
+    <p>Quality chickens & rabbits, raised with care.</p>
+    <div class="socials">
+      <a id="fFb" target="_blank" rel="noopener">Facebook</a>
+      <a id="fIg" target="_blank" rel="noopener">Instagram</a>
+      <a id="fWa" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p>© <span id="year"></span> Green Acres Farm. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+/* ============ EDIT YOUR DETAILS HERE ============ */
+const CONFIG = {
+  whatsapp: "2347032445916",              // phone number, country code, no + or spaces
+  phoneDisplay: "+234 7032 445 916",
+  facebook: "https://facebook.com/yourpage",
+  instagram: "https://instagram.com/yourpage",
+  currency: "₦"
+};
+
+const PRODUCTS = [
+  // cat: chicken | rabbit | eggs
+  {cat:"chicken", icon:"🐔", name:"Broiler", desc:"Fast-growing, healthy, ready for the pot.", price:40000, unit:"per bird"},
+  {cat:"chicken", icon:"🐓", name:"Cockerel", desc:"Strong, meaty cockerels.", price:25000, unit:"per bird"},
+  {cat:"chicken", icon:"🍗", name:"Point-of-Lay Layer", desc:"Ready to start laying eggs.", price:15000, unit:"per bird"},
+  {cat:"chicken", icon:"🐣", name:"Day-Old Chicks", desc:"Healthy chicks for your own farm.", price:3000, unit:"per chick"},
+  {cat:"rabbit", icon:"🐇", name:"Meat Rabbit", desc:"Healthy rabbits, ready for the table.", price:50000, unit:"per rabbit"},
+  {cat:"rabbit", icon:"🐰", name:"Breeding Doe (Female)", desc:"Good mothers, healthy breeding stock.", price:40000, unit:"per rabbit"},
+  {cat:"rabbit", icon:"🐇", name:"Breeding Buck (Male)", desc:"Strong, active breeding male.", price:25000, unit:"per rabbit"},
+  {cat:"rabbit", icon:"🍼", name:"Weaners", desc:"Young rabbits ready to grow.", price:6000, unit:"per rabbit"},
+  {cat:"eggs", icon:"🥚", name:"Fresh Eggs", desc:"Collected daily, 30 eggs per crate.", price:6500, unit:"per crate"},
+  {cat:"eggs", icon:"🌱", name:"Poultry Manure", desc:"Great for crops and gardens.", price:8000, unit:"per bag"},
+  {cat:"eggs", icon:"🌾", name:"Rabbit Manure", desc:"Rich natural fertiliser.", price:10000, unit:"per gallon"}
+];
+/* ================================================ */
+
+const fmt = n => CONFIG.currency + n.toLocaleString();
+const waBase = "https://wa.me/" + CONFIG.whatsapp;
+
+// Links
+["waLink","fWa","fab"].forEach(id => document.getElementById(id).href = waBase + "?text=" + encodeURIComponent("Hello, I'd like to make an enquiry."));
+["fbLink","fFb"].forEach(id => document.getElementById(id).href = CONFIG.facebook);
+["igLink","fIg"].forEach(id => document.getElementById(id).href = CONFIG.instagram);
+document.getElementById("telLink").href = "tel:+" + CONFIG.whatsapp;
+document.getElementById("telText").textContent = CONFIG.phoneDisplay;
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Mobile menu
+const menu = document.getElementById("menu");
+document.getElementById("menuBtn").onclick = () => menu.classList.toggle("open");
+menu.querySelectorAll("a").forEach(a => a.onclick = () => menu.classList.remove("open"));
+
+// Prices
+const grid = document.getElementById("priceGrid");
+function renderPrices(cat){
+  grid.innerHTML = PRODUCTS.filter(p => p.cat === cat).map(p => `
+    <div class="price-card">
+      <div class="price-top">${p.image ? `<img src="${p.image}" alt="${p.name}">` : p.icon}</div>
+      <div class="price-body">
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        <div class="price">${fmt(p.price)} <small>${p.unit}</small></div>
+        <button class="btn btn-wa" onclick="quickOrder('${p.name.replace(/'/g,"\\'")}')">Order</button>
+      </div>
+    </div>`).join("");
+}
+document.querySelectorAll(".tab").forEach(t => t.onclick = () => {
+  document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
+  t.classList.add("active");
+  renderPrices(t.dataset.cat);
+});
+renderPrices("chicken");
+
+// Order form
+const itemSel = document.getElementById("item");
+itemSel.innerHTML = PRODUCTS.map(p => `<option>${p.name}</option>`).join("");
+function quickOrder(name){
+  itemSel.value = name;
+  document.getElementById("order").scrollIntoView({behavior:"smooth"});
+}
+document.getElementById("orderForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const text = `Hello, I'd like to order:\n\n` +
+    `Name: ${v("name")}\nItem: ${v("item")}\nQuantity: ${v("qty")}\n` +
+    (v("loc") ? `Location: ${v("loc")}\n` : "") +
+    (v("msg") ? `Note: ${v("msg")}` : "");
+  window.open(waBase + "?text=" + encodeURIComponent(text), "_blank");
+});
+
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(en => {
+  if(en.isIntersecting){en.target.classList.add("show");io.unobserve(en.target)}
+}), {threshold:.12});
+document.querySelectorAll(".reveal, .card, .quote, .c-card").forEach(el => {el.classList.add("reveal");io.observe(el)});
+</script>
+</body>
+</html>-*--*--
